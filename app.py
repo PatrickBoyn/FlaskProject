@@ -8,9 +8,14 @@ app = Flask(__name__)
 def create_store():
     pass
 
+# GET a single store.
 @app.route('/store/<string:name>')
 def get_store(name):
     pass
 
+# GET all stores.
+@app.route('/store')
+def get_stores():
+    pass
 
 app.run(port=5500, debug=True)
