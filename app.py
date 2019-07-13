@@ -18,7 +18,7 @@ stores = [
 # POST a new store.
 @app.route('/store', methods=['POST'])
 def create_store():
-    pass
+    request_data = request.get_json()
 
 # GET a single store.
 @app.route('/store/<string:name>')
