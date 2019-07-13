@@ -8,7 +8,7 @@ app = Flask(__name__)
 def create_store():
     pass
 
-@app.route('/store')
+@app.route('/store/<string:name>')
 def get_store():
     pass
 
