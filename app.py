@@ -2,6 +2,18 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+stores = [
+    {
+        "name": "Acme Inc.",
+        "items": [
+            {
+                "name": "barrels",
+                "price": 30
+            }
+        ]
+    }
+]
+
 # Remember the s at the end of methods.
 # POST a new store.
 @app.route('/store', methods=['POST'])
