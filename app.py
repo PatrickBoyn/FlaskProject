@@ -24,6 +24,8 @@ def create_store():
         'items': []
     }
 
+    stores.append(new_store)
+    return jsonify(new_store)
 # GET a single store.
 @app.route('/store/<string:name>')
 def get_store(name):
