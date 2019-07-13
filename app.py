@@ -30,7 +30,10 @@ def create_store():
 # GET a single store.
 @app.route('/store/<string:name>')
 def get_store(name):
-    pass
+    for store in stores:
+        if(name == store['name']):
+            return jsonify(store)
+    return jsonify({'message': 'No store found.'})
 
 # GET all stores.
 @app.route('/store')
@@ -46,5 +49,6 @@ def create_item(name):
 @app.route('/store/<string:name>/item')
 def get_item(name):
     pass
+
 
 app.run(port=5500, debug=True)
